@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modalka</title>
+
+    <link rel="stylesheet" href="modalka.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="modalka.js"></script>
+
+</head>
+<body>
+
+    <button class="modalkaOpener" modalka="newModalka">Open modalka</button>
+    <button class="modalkaOpener" modalka="newModalka2">Open modalka 2</button>
+
+    <div class="modalkaWrapper" id="newModalka">
+        <div class="modalkaInner">
+            <div class="modalkaHeader">
+                <div class="modalkaTitleWrapper">
+                    <span class="modalkaTitle">Modalka</span>
+                </div>
+                <div class="modalkaBtns">
+                    <button class="modalkaBtn error modalkaClose">X</button>
+                </div>
+            </div>
+            <div class="modalkaBody">
+                <p> This is a modalka's body </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalkaWrapper" id="newModalka2">
+        <div class="modalkaInner">
+            <div class="modalkaHeader">
+                <div class="modalkaTitleWrapper">
+                    <span class="modalkaTitle">Modalka 2</span>
+                </div>
+                <div class="modalkaBtns">
+                    <button class="modalkaBtn error modalkaClose">X</button>
+                </div>
+            </div>
+            <div class="modalkaBody">
+                <p> This is a modalka's body 2</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+.modalkaWrapper{
+    display: none;
+}
+
+.modalkaWrapper.open {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: rgb(0 0 0 / 20%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.modalkaInner {
+    width: 40%;
+    height: 50%;
+    border-radius: 0.2em;
+    box-shadow: rgb(32 60 88 / 20%) 0px 8px 24px;
+
+    animation: slide-in 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(15%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalkaHeader{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.modalkaTitleWrapper, .modalkaBtns{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.modalkaTitle {
+    font-family: serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modalkaBtns {
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.modalkaBody{
+    width: 100%;
+    height: 90%;
+}
+
+.modalkaBtn {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    min-width: 30px;
+    min-height: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.2em;
+    cursor: pointer;
+    box-shadow: rgb(3 9 10 / 32%) 0px 0px 10px;
+}
+
+.modalkaBtn:hover {
+    box-shadow: rgba(3, 9, 10, 0.658) 0px 0px 10px;
+}
+
+.modalkaBtn.error{
+    color: orangered;
+}
+
+.modalkaBtn.success{
+    color: green;
+}
+
+.modalkaBtn.warning{
+    color: orange;
+}
+
+.modalkaBtn.info{
+    color: cornflowerblue;
+}
+
+@media screen and (max-width: 600px) {
+    .modalkaInner {
+        width: 90%;
+        height: 90%;
+    }
+}
